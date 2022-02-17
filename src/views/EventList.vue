@@ -16,53 +16,7 @@ export default {
   },
   data() {
     return {
-      events: null,
-      //  [
-    //   {
-    //   id: 23452345,
-    //   category: 'Gyvunu prieglauda',
-    //   title: 'Siamo katino paemimo diena',
-    //   description: 'Naujo seimininko suradimas',
-    //   location: 'Vilnius',
-    //   date: 'January 28, 2022',
-    //   time: '12:00',
-    //   petsAllowed: true,
-    //   organizer: 'Jonas Jonaitis',
-    // },
-    //   {
-    //   id: 2345234232,
-    //   category: 'Gyvunu prieglauda',
-    //   title: 'Sembernaro suns paemimo diena',
-    //   description: 'Naujo seimininko suradimas',
-    //   location: 'Vilnius',
-    //   date: 'January 28, 2022',
-    //   time: '12:00',
-    //   petsAllowed: true,
-    //   organizer: 'Petras Petraitis',
-    // },
-    //   {
-    //   id: 234523454,
-    //   category: 'Gyvunu prieglauda',
-    //   title: 'Rusu melynojo katino paemimo diena',
-    //   description: 'Naujo seimininko suradimas',
-    //   location: 'Vilnius',
-    //   date: 'January 28, 2022',
-    //   time: '12:00',
-    //   petsAllowed: true,
-    //   organizer: 'Zigmas Zigmaitis',
-    // },
-    //   {
-    //   id: 234523556,
-    //   category: 'Gyvunu prieglauda',
-    //   title: 'Dobermano suns paemimo diena',
-    //   description: 'Naujo seimininko suradimas',
-    //   location: 'Vilnius',
-    //   date: 'January 28, 2022',
-    //   time: '12:00',
-    //   petsAllowed: true,
-    //   organizer: 'Albinas Albinaitis',
-    // },
-    //   ]
+      events: null,      
     }
   },
   created() {
@@ -70,7 +24,7 @@ export default {
     // .then(response => this.events = response.data)
     // .catch(err => console.log(err))
 
-    services.fetchEvents()
+    services.getAllEvents()
     .then(response => this.events = response.data)
     .catch(err => console.log(err))
   }
