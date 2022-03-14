@@ -4,6 +4,7 @@ import EventDetails from "../views/event/Details.vue";
 import EventLayout from "../views/event/Layout.vue";
 import EventEdit from "../views/event/Edit.vue";
 import EventRegister from "../views/event/Register.vue";
+import NotFound from "../views/event/NotFound.vue";
 
 const routes = [
   {
@@ -44,6 +45,17 @@ const routes = [
     component: () =>
       import(/* webpackChunkName: "about" */ "../views/About.vue"),
   },
+  {
+    path: '/:catchAll(.*)',
+    name: 'NotFound',
+    component: NotFound
+  },
+  {
+    path: '/404/:resource',
+    name: '404Resource',
+    component: NotFound,
+    props: true
+  }
 ];
 
 const router = createRouter({

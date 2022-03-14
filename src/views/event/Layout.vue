@@ -26,7 +26,14 @@ export default {
             // console.log('CCCCCCCC ', response.data)
             return this.event = response.data
             })
-        .catch(err => console.log(err))
+        .catch(err => {
+            console.log(err)
+            
+            this.$router.push({
+                name: '404Resource',
+                params: { resource: 'event' }
+            })
+        })
     }
 }
 </script>

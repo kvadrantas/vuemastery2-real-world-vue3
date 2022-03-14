@@ -1,10 +1,21 @@
 <template>
-  <div id="nav">
-    <router-link to="/">Event List</router-link> |
-    <router-link to="/about">About</router-link>
+  <div>
+    <div id="flashMessage" v-if="GStore.flashMessage">
+      {{ GStore.flashMessage }}
+    </div>
+    <div id="nav">
+      <router-link to="/">Event List</router-link> |
+      <router-link to="/about">About</router-link>
+    </div>
+    <router-view />
   </div>
-  <router-view />
 </template>
+
+<script>
+export default {
+  inject: ['GStore']
+}
+</script>
 
 <style>
 #app {
